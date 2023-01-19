@@ -1,1 +1,7 @@
-# [BioGPT](https://www.bio.ehsanghaffarii
+# [BioGPT](https://www.bio.ehsanghaffarii.ir/)
+
+این پروژه با استفاده از هوش مصنوعی بایو شبکه‌های اجتماعی برای شما  میسازه
+
+## کارش چیه؟
+
+این پروژه بر اساس ورودی کاربر با  [چت
