@@ -25,3 +25,9 @@ docker network create my_network
 docker-compose -f docker-compose.dev.yml build
 
 # پروژه رو راه اندازی کن
+docker-compose -f docker-compose.dev.yml up
+```
+
+#### پیشنهاد یا هرچی
+
+اگه در مورد این پروژه سوال یا نظر یا هر چی 😁 داری ایمی
