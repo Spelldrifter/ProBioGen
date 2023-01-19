@@ -30,4 +30,5 @@ docker-compose -f docker-compose.dev.yml up
 
 #### پیشنهاد یا هرچی
 
-اگه در مورد این پروژه سوال یا نظر یا هر چی 😁 داری ایمی
+اگه در مورد این پروژه سوال یا نظر یا هر چی 😁 داری ایمیل من اینه [ghafari.5000@gmail.com](mailto:ghafari.5000@gmail.com)
+
