@@ -12,4 +12,9 @@
 
 راه‌اندازی با یک کلیک
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?rep
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/ehsanghaffar/biogpt&env=OPENAI_API_KEY&project-name=bio-gpt&repo-name=biogpt)
+
+
+## راه‌اندازی با داکر
+
+```bash
