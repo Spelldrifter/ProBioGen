@@ -18,3 +18,10 @@
 ## راه‌اندازی با داکر
 
 ```bash
+# یک داکر نتورک بساز
+docker network create my_network
+
+# پروژه رو بیلد بگیر
+docker-compose -f docker-compose.dev.yml build
+
+# پروژه رو راه اندازی کن
