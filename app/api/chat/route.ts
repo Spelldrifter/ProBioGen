@@ -9,3 +9,10 @@ export async function POST(request: Request) {
   const messages = await request.json()
   if (!messages) {
     return new Response("No messages provided", { status: 400 })
+  }
+  console.log(messages)
+
+  const openai = getOpenAIApiInstance(apikey)
+
+  try {
+    const completion = await open
