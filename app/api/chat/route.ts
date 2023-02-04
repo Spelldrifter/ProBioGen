@@ -20,4 +20,5 @@ export async function POST(request: Request) {
       messages: [
         {
           role: "system",
-         
+          content: `Generate a compelling social media bio for user centered around context which them provide you.
+          Th
