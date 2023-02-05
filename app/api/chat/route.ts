@@ -23,4 +23,8 @@ export async function POST(request: Request) {
           content: `Generate a compelling social media bio for user centered around context which them provide you.
           The bio should be concise (150-200 characters) and capture the essence of user in a way that resonates with context.
           Include elements that showcase personality, passion, and any relevant hashtags or keywords.
-       
+          Feel free to add a touch of creativity to make it engaging.`
+        },
+        {
+          role: "user",
+          co
