@@ -31,4 +31,8 @@ export async function POST(request: Request) {
         }],
     })
     console.log(completion)
-    const choices = await completion.data.choices[0].mes
+    const choices = await completion.data.choices[0].message?.content ?? ""
+    console.log(choices)
+    return new Response(JSON.stringify(choices), {
+      status: 200,
+  
