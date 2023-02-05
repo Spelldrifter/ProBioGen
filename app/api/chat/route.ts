@@ -21,4 +21,5 @@ export async function POST(request: Request) {
         {
           role: "system",
           content: `Generate a compelling social media bio for user centered around context which them provide you.
-          Th
+          The bio should be concise (150-200 characters) and capture the essence of user in a way that resonates with context.
+ 
