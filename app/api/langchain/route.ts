@@ -25,3 +25,60 @@ Length: Maintain a concise length of 150-200 characters to ensure the bio is bot
 Content: Emphasize personality traits, passions, and include relevant keywords that resonate with their vibe choice and interests.
 Creativity: Add a unique creative flair to make the bio captivating and reflective of the chosen vibe, ensuring it stands out.
 
+
+{input}`;
+
+
+const apikey = process.env.NEXT_PUBLIC_OPENAI_API_KEY
+
+
+export async function POST(req: NextRequest) {
+  try {
+
+    const ip = getUserIp();
+    if (!checkRateLimit(ip as string)) {
+      return NextResponse.json({ error: "شما بیش از حد مجاز از سرویس استفاده کرده اید. چند ساعت بعد امتحان کنید" }, { status: 429 });
+    }
+
+    console.log(`USER IP: ${ip}`)
+
+    const userMessage = await req.json()
+
+    const messages = createUserMessage(userMessage)
+
+    const prompt = PromptTemplate.fromTemplate<{ input: string }>(TEMPLATE);
+
+    const model = createOpenAIModel(apikey)
+
+    const schema = z.object({
+      output: z.array(
+        z.object({
+          id: z.string(),
+          content: z.string(),
+        })
+      ),
+
+    });
+
+    console.log(prompt)
+
+    const chain = createStructuredOutputChainFromZod(schema, {
+      llm: model,
+      prompt,
+      outputKey: "output",
+    });
+
+    const result = await chain.call({
+      input: messages,
+    });
+    console.log(result)
+
+    return NextResponse.json(result.output, { status: 200 });
+  } catch (e: any) {
+    console.log(e)
+    if (e.message.includes("API key")){
+      return NextResponse.json({ error: "سرویس فعلا در دسترس نیست" }, { status: 500 });
+    }
+    return NextResponse.json({ error: e.message }, { status: 500 });
+  }
+}
