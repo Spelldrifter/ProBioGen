@@ -35,4 +35,10 @@ export async function POST(request: Request) {
     console.log(choices)
     return new Response(JSON.stringify(choices), {
       status: 200,
-  
+    })
+  } catch (error) {
+    console.log(error)
+    return errorHandler(error);
+  }
+
+}
