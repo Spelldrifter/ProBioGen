@@ -27,4 +27,8 @@ export async function POST(request: Request) {
         },
         {
           role: "user",
-          co
+          content: messages
+        }],
+    })
+    console.log(completion)
+    const choices = await completion.data.choices[0].mes
