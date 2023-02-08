@@ -12,4 +12,8 @@ export default function Error({
   useEffect(() => {
     // Log the error to an error reporting service
     console.error(error)
-  }, [error]
+  }, [error])
+
+  return (
+    <section className="w-full flex text-center md:text-left justify-center">
+      <div className=" flex fle
