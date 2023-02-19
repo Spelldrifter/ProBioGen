@@ -40,4 +40,8 @@ export default function RootLayout({
   return (
     <html lang="fa" dir="rtl">
       <body className="min-h-screen flex flex-col">
-    
+        <header>
+        <Header />
+        </header>
+        <main className="flex flex-1">
+        {
