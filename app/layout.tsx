@@ -9,4 +9,9 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 
 type Props = {
   params: { id: string }
-  searchP
+  searchParams: { [key: string]: string | string[] | undefined }
+}
+
+
+export const metadata: Metadata = {
+  title: 'د
