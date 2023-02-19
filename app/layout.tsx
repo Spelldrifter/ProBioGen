@@ -24,4 +24,6 @@ export const metadata: Metadata = {
     description: 'اینجا می‌تونی با چند کلیک ساده، بایویی شخصی‌سازی شده و جذاب که نمایانگر واقعی شخصیت توه، بسازی.',
     images: [{
       url: 'https://bio.eindev.ir/screenshot.png',
-      width: '300
+      width: '300',
+      height: '300',
+      alt: "با استفاده از جدیدترین فناوری هوش مصنوعی، ما به شما کمک می‌کنیم تا بایویی ایجاد 
