@@ -21,4 +21,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'در کسری از ثانیه، بایویی خیره‌کننده و جذاب بساز!',
-    description: 'اینجا می‌تونی با چند کلیک ساده، بایویی شخصی‌سازی شده و جذاب که نمایانگر 
+    description: 'اینجا می‌تونی با چند کلیک ساده، بایویی شخصی‌سازی شده و جذاب که نمایانگر واقعی شخصیت توه، بسازی.',
+    images: [{
+      url: 'https://bio.eindev.ir/screenshot.png',
+      width: '300
