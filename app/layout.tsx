@@ -14,4 +14,5 @@ type Props = {
 
 
 export const metadata: Metadata = {
-  title: 'د
+  title: 'در کسری از ثانیه، بایویی خیره‌کننده و جذاب بساز!',
+  description: 'اینجا می‌تونی با چند کلیک ساده، بایویی شخصی‌سازی شده و جذاب که نمایانگر و
