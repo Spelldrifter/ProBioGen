@@ -26,4 +26,13 @@ export const metadata: Metadata = {
       url: 'https://bio.eindev.ir/screenshot.png',
       width: '300',
       height: '300',
-      alt: "با استفاده از جدیدترین فناوری هوش مصنوعی، ما به شما کمک می‌کنیم تا بایویی ایجاد 
+      alt: "با استفاده از جدیدترین فناوری هوش مصنوعی، ما به شما کمک می‌کنیم تا بایویی ایجاد کنید که همه را مجذوب خود کند."
+    }]
+  },
+}
+
+
+export default function RootLayout({
+  children,
+}: {
+  children: React
