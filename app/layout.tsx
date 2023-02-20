@@ -48,4 +48,11 @@ export default function RootLayout({
         </main>
         <footer className='flex flex-col w-full bottom-0'>
         <Footer />
-     
+        </footer>
+        <Toaster richColors />
+        <Analytics />
+        <SpeedInsights />
+        </body>
+    </html>
+  )
+}
