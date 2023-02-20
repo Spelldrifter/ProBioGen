@@ -44,4 +44,8 @@ export default function RootLayout({
         <Header />
         </header>
         <main className="flex flex-1">
-        {
+        {children}
+        </main>
+        <footer className='flex flex-col w-full bottom-0'>
+        <Footer />
+     
