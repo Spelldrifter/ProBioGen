@@ -10,4 +10,10 @@ export default function NotFound() {
           اوه، نه!
         </p>
 
-   
+        <p className="mt-4 text-gray-500">
+          هیچی اینجا نیست.
+        </p>
+
+        <Link
+          href="/"
+          classNam
