@@ -108,3 +108,115 @@ const BioGenerator = () => {
     } catch (error) {
       const err = error as Error;
       console.log(err);
+      sonnar.error("به نظر میاد مشکلی هست", {
+        description: err.message,
+      });
+    } finally {
+      setLoading(false);
+      setCooldownTimer(NEXT_PUBLIC_COOLDOWN_TIME);
+    }
+  };
+
+  return (
+    <>
+      <div className="flex flex-1 w-full flex-col items-center justify-center text-center px-4">
+        <div className="flex items-center">
+          <h2 className="text-xl sm:text-2xl !leading-[4rem] font-bold text-slate-700">
+            با
+          </h2>
+          <img
+            alt="ClubGPT icon"
+            src="/screenshot.png"
+            className="sm:w-36"
+            width={100}
+            height={50}
+          />
+          <h2>برای خودت بایو حـرفه‌ای بساز 😎</h2>
+        </div>
+        <div className="w-full sm:max-w-2xl mt-6 sm:mt-1 p-4 border rounded">
+          <div className="grid w-full gap-2">
+            <div className="flex items-center gap-2">
+              <CheckSquare size={14} />
+              <p className="text-left col-span-2">
+                <span className="text-slate-700 text-sm sm:text-base">
+                  یکم در مورد خودت بنویس
+                </span>
+                <span className="px-1 text-slate-400 text-xs">
+                  (مثل نمونه‌ای که گذاشتم)
+                </span>
+              </p>
+            </div>
+            <Textarea
+              value={bio}
+              onChange={handleBioChange}
+              rows={4}
+              className="w-full rounded-md border-gray-600 shadow-sm focus:border-black focus:ring-black"
+              placeholder={"طراح گرافیک، ۴ سال سابقه کار"}
+            />
+          </div>
+          <div className="grid w-full gap-2 mt-6">
+            <div className="flex items-center gap-2">
+              <CheckSquare size={14} className="sm:w-5 sm:h-5" />
+              <p className="text-left text-slate-700 text-sm sm:text-base">
+                نوعش رو انتخاب کن
+                <span className="text-slate-400 text-xs">
+                  {" "}
+                  (حرفه‌ای 😎، معمولی🙂 یا طنز🤪)
+                </span>
+              </p>
+            </div>
+            <div className="">
+              <Select
+                dir="rtl"
+                value={vibe}
+                // @ts-ignore
+                onValueChange={setVibe}
+              >
+                <SelectTrigger className="">
+                  <SelectValue placeholder="انتخاب کن" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectGroup>
+                    <SelectLabel>وایب</SelectLabel>
+                    {vibes.map((vibeItem, index) => (
+                      <SelectItem key={index} value={vibeItem}>
+                        {vibeItem}
+                      </SelectItem>
+                    ))}
+                  </SelectGroup>
+                </SelectContent>
+              </Select>
+            </div>
+          </div>
+          {!loading && (
+            <Button
+              className={`w-full rounded-md text-white font-semibold px-4 py-3 sm:mt-10 mt-8 ${
+                bio.length === 0 || isCooldown ? "bg-orange-600" : "bg-black"
+              } ${isCooldown ? "hover:bg-orange-600" : "hover:bg-black/70"}`}
+              onClick={generateBio}
+              disabled={bio.length === 0}
+            >
+              {isCooldown
+                ? `برای ساخت دوباره ${cooldownTimer} ثانیه صبر کن`
+                : "بزن اینجا تا بسازم"}
+            </Button>
+          )}
+          {loading && (
+            <Button
+              className="w-full bg-black rounded-lg text-white font-medium gap-2 px-4 py-2 sm:mt-10 mt-8 hover:bg-black/80"
+              disabled
+            >
+              در حال فکر کردن <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+            </Button>
+          )}
+        </div>
+        <Toaster
+          position="top-center"
+          reverseOrder={false}
+          toastOptions={{ duration: 2000 }}
+        />
+        <hr className="h-px bg-gray-700 border-1 dark:bg-gray-700" />
+        <div className="my-4">
+          <div className="space-y-8 flex flex-col items-center justify-center max-w-xl mx-auto">
+            {generatedBios &&
+              generatedBios.map((bio) => (
