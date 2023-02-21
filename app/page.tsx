@@ -220,3 +220,25 @@ const BioGenerator = () => {
           <div className="space-y-8 flex flex-col items-center justify-center max-w-xl mx-auto">
             {generatedBios &&
               generatedBios.map((bio) => (
+                <div
+                  ref={bioRef}
+                  className="bg-white rounded-xl shadow-md p-4 hover:bg-gray-100 transition cursor-copy border"
+                  onClick={() => {
+                    navigator.clipboard.writeText(bio.content);
+                    toast("بایو کپی شد", {
+                      icon: "✂️",
+                    });
+                  }}
+                  key={bio.id}
+                >
+                  <p>{bio.content}</p>
+                </div>
+              ))}
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default BioGenerator;
