@@ -10,4 +10,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: 'https://ehsanghaffarii.ir/about',
-      lastM
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: 'http
