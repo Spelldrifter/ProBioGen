@@ -5,4 +5,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: 'https://ehsanghaffarii.ir',
       lastModified: new Date(),
-      changeFrequ
+      changeFrequency: 'yearly',
+      priority: 1,
+    },
+    {
+      url: 'https://ehsanghaffarii.ir/about',
+      lastM
