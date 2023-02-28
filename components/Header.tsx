@@ -10,4 +10,8 @@ export default function Header() {
           src="/screenshot.png"
           className="sm:w-36"
           width={100}
-        
+          height={60}
+        />
+      </Link>
+      <a
+        className="flex items-center gap-2 justify-center borde
