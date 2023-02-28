@@ -14,4 +14,5 @@ export default function Header() {
         />
       </Link>
       <a
-        className="flex items-center gap-2 justify-center borde
+        className="flex items-center gap-2 justify-center border py-1 px-2 rounded text-xs sm:text-sm text-gray-600 transition-colors hover:bg-gray-100"
+        href="https://github.
