@@ -20,4 +20,8 @@ export default function Header() {
         rel="noopener noreferrer"
       >
         <Github />
-        <p
+        <p>سورس کد</p>
+      </a>
+    </div>
+  );
+}
