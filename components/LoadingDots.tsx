@@ -8,4 +8,8 @@ const LoadingDots = ({
   color: string;
   style?: string;
 }) => {
-  const loadingSty
+  const loadingStyle = style === "small" ? styles.loading2 : styles.loading;
+
+  return (
+    <span className={loadingStyle}>
+      <spa
