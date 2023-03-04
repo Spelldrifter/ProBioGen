@@ -14,4 +14,13 @@ const LoadingDots = ({
     <span className={loadingStyle}>
       <span style={{ backgroundColor: color }} />
       <span style={{ backgroundColor: color }} />
-      <span style={{ b
+      <span style={{ backgroundColor: color }} />
+    </span>
+  );
+};
+
+LoadingDots.defaultProps = {
+  style: "small",
+};
+
+export default Loadin
