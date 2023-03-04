@@ -12,4 +12,6 @@ const LoadingDots = ({
 
   return (
     <span className={loadingStyle}>
-      <spa
+      <span style={{ backgroundColor: color }} />
+      <span style={{ backgroundColor: color }} />
+      <span style={{ b
