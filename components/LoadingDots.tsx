@@ -23,4 +23,4 @@ LoadingDots.defaultProps = {
   style: "small",
 };
 
-export default Loadin
+export default LoadingDots;
