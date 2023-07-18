@@ -12,4 +12,9 @@ export interface ChatGPTMessage {
   content: string;
 }
 
-export interfa
+export interface OpenAIStreamPayload {
+  model: string;
+  messages: ChatGPTMessage[];
+  temperature: number;
+  top_p: number;
+  frequency_
