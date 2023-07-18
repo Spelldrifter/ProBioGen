@@ -1,4 +1,8 @@
 import axios from "axios";
 import {
   createParser,
-  Pars
+  ParsedEvent,
+  ReconnectInterval,
+} from "eventsource-parser";
+
+export type ChatGPTAgent = "user" | 
