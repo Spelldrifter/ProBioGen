@@ -24,4 +24,6 @@ export interface OpenAIStreamPayload {
   n: number;
 }
 
-export
+export async function OpenAIStream(payload: OpenAIStreamPayload) {
+  const encoder = new TextEncoder();
+  co
