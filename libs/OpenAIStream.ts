@@ -26,4 +26,8 @@ export interface OpenAIStreamPayload {
 
 export async function OpenAIStream(payload: OpenAIStreamPayload) {
   const encoder = new TextEncoder();
-  co
+  const decoder = new TextDecoder();
+
+  let counter = 0;
+
+  const res = await axios("https://api.openai.com/v1/chat/completions"
