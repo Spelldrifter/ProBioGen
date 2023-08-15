@@ -39,4 +39,7 @@ export async function OpenAIStream(payload: OpenAIStreamPayload) {
     data: JSON.stringify(payload),
   });
 
-  const stream = n
+  const stream = new ReadableStream({
+    async start(controller) {
+      // callback
+      function onParse(event: ParsedEvent | Reconnect
