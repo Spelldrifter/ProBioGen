@@ -42,4 +42,7 @@ export async function OpenAIStream(payload: OpenAIStreamPayload) {
   const stream = new ReadableStream({
     async start(controller) {
       // callback
-      function onParse(event: ParsedEvent | Reconnect
+      function onParse(event: ParsedEvent | ReconnectInterval) {
+        if (event.type === "event") {
+          const data = event.data;
+          if (data === "[DONE]") {
