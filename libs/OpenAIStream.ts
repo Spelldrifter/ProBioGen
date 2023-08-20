@@ -50,4 +50,6 @@ export async function OpenAIStream(payload: OpenAIStreamPayload) {
             return;
           }
           try {
-            const json = JSON.parse(dat
+            const json = JSON.parse(data);
+            const text = json.choices[0].delta?.content || "";
+            if (counter < 2 && (text.mat
