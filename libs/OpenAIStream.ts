@@ -46,3 +46,8 @@ export async function OpenAIStream(payload: OpenAIStreamPayload) {
         if (event.type === "event") {
           const data = event.data;
           if (data === "[DONE]") {
+            controller.close();
+            return;
+          }
+          try {
+            const json = JSON.parse(dat
