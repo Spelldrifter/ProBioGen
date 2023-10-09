@@ -58,4 +58,9 @@ export async function OpenAIStream(payload: OpenAIStreamPayload) {
             }
             const queue = encoder.encode(text);
             controller.enqueue(queue);
-          
+            counter++;
+          } catch (e) {
+            // maybe parse error
+            controller.error(e);
+          }
+   
