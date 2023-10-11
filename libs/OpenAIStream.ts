@@ -63,4 +63,8 @@ export async function OpenAIStream(payload: OpenAIStreamPayload) {
             // maybe parse error
             controller.error(e);
           }
-   
+        }
+      }
+
+      // stream response (SSE) from OpenAI may be fragmented into multiple chunks
+      
