@@ -72,3 +72,8 @@ export async function OpenAIStream(payload: OpenAIStreamPayload) {
       for await (const chunk of res.data as any) {
         parser.feed(decoder.decode(chunk));
       }
+    },
+  });
+
+  return stream;
+}
