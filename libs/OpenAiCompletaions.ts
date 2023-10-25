@@ -10,4 +10,9 @@ import { Configuration, OpenAIApi } from "openai";
 //   apiKey: process.env.NEXT_PUBLIC_OPENAI_API_KEY,
 // });
 
-// const openai = new OpenAI
+// const openai = new OpenAIApi(configuration);
+
+// export default openai
+
+export function getOpenAIApiInstance(apiKey: string) {
+  const configuration = new Configur
