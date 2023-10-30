@@ -15,4 +15,8 @@ import { Configuration, OpenAIApi } from "openai";
 // export default openai
 
 export function getOpenAIApiInstance(apiKey: string) {
-  const configuration = new Configur
+  const configuration = new Configuration({
+    apiKey,
+  });
+  return new OpenAIApi(configuration);
+}
