@@ -1,2 +1,6 @@
 export class RateLimitError extends Error {
-  const
+  constructor() {
+    super("Rate limit exceeded");
+    this.name = "RateLimitError";
+  }
+}
