@@ -8,4 +8,9 @@ export function getUserIp() {
     return forwardedFor.split(",")[0].trim();
   }
 
- 
+  if (realIp) {
+    return realIp.trim();
+  }
+
+  return null;
+}
