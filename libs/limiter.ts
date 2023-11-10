@@ -15,4 +15,12 @@ const trackers: Record<string, Tracker> = {};
 function pruneTrackers() {
   const now = Date.now();
   Object.keys(trackers).forEach(key => {
-    if (trackers[key].expiresAt < now)
+    if (trackers[key].expiresAt < now) {
+      delete trackers[key];
+    }
+  });
+}
+
+setInterval(pruneTrackers, PRUNE_INTERVAL);
+
+async function rateLimit(ke
