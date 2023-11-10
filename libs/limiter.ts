@@ -6,4 +6,10 @@ const PRUNE_INTERVAL = 60 * 1000; // 1 minute
 // Typing for tracker objects
 interface Tracker {
   count: number;
-  expiresA
+  expiresAt: number;
+}
+
+// Record of IP or custom keys to Tracker objects
+const trackers: Record<string, Tracker> = {};
+
+fu
