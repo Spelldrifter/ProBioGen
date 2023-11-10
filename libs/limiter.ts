@@ -12,4 +12,7 @@ interface Tracker {
 // Record of IP or custom keys to Tracker objects
 const trackers: Record<string, Tracker> = {};
 
-fu
+function pruneTrackers() {
+  const now = Date.now();
+  Object.keys(trackers).forEach(key => {
+    if (trackers[key].expiresAt < now)
