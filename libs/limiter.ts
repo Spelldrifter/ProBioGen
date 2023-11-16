@@ -23,4 +23,6 @@ function pruneTrackers() {
 
 setInterval(pruneTrackers, PRUNE_INTERVAL);
 
-async function rateLimit(ke
+async function rateLimit(key: string, limit = 1, windowMs = 10000) {
+  const now = Date.now();
+  const tracker: Tracker = trackers[key] ?? { 
