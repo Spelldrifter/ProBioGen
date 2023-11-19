@@ -36,4 +36,13 @@ async function rateLimit(key: string, limit = 1, windowMs = 10000) {
   trackers[key] = tracker;
 
   if (tracker.count > limit) {
-    throw new RateLi
+    throw new RateLimitError();
+  }
+}
+
+export async function rateLimitByIp({
+  key = "global",
+  limit = 1,
+  window = 10000,
+}: {
+  key?: s
