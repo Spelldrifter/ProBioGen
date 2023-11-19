@@ -29,4 +29,11 @@ async function rateLimit(key: string, limit = 1, windowMs = 10000) {
 
   if (tracker.expiresAt < now) {
     tracker.count = 0;
-    tracker.e
+    tracker.expiresAt = now + windowMs;
+  }
+
+  tracker.count++;
+  trackers[key] = tracker;
+
+  if (tracker.count > limit) {
+    throw new RateLi
