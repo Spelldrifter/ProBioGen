@@ -45,4 +45,12 @@ export async function rateLimitByIp({
   limit = 1,
   window = 10000,
 }: {
-  key?: s
+  key?: string;
+  limit?: number;
+  window?: number;
+}) {
+  const ip = getUserIp();
+  if (!ip) {
+    throw new RateLimitError();
+  }
+  aw
