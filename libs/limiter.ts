@@ -61,4 +61,9 @@ export async function rateLimitByKey({
   limit = 1,
   window = 10000,
 }: {
-  key?: str
+  key?: string;
+  limit?: number;
+  window?: number;
+}) {
+  await rateLimit(key, limit, window);
+}
