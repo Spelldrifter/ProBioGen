@@ -53,4 +53,12 @@ export async function rateLimitByIp({
   if (!ip) {
     throw new RateLimitError();
   }
-  aw
+  await rateLimit(`${ip}-${key}`, limit, window);
+}
+
+export async function rateLimitByKey({
+  key = "global",
+  limit = 1,
+  window = 10000,
+}: {
+  key?: str
