@@ -7,4 +7,6 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "yarn run
+    "yarn run clean": "rm -rf node_modules **/node_modules && rm -rf yarn.lock **/yarn.lock && yarn cache clean && yarn install"
+  },
+  "dependenci
