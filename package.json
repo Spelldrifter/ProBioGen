@@ -9,4 +9,7 @@
     "start": "next start",
     "yarn run clean": "rm -rf node_modules **/node_modules && rm -rf yarn.lock **/yarn.lock && yarn cache clean && yarn install"
   },
-  "dependenci
+  "dependencies": {
+    "@headlessui/react": "^1.7.7",
+    "@headlessui/tailwindcss": "^0.1.2",
+    "@heroicons/react": "^2.0.13",
