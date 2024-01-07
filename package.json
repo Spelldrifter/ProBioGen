@@ -34,4 +34,9 @@
     "react-use-measure": "^2.1.1",
     "sonner": "^1.4.41",
     "tailwind-merge": "^2.2.0",
-    "tailwind
+    "tailwindcss-animate": "^1.0.7",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "18.11.3",
+    "@types/react": "18.0.21",
