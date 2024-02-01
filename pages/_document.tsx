@@ -12,4 +12,5 @@ class MyDocument extends Document {
             property="og:description"
             content="ساخت بایو برای شبکه های اجتماعی"
           />
-  
+          <meta property="og:title" content="بایو حرفه ای" />
+          <meta name="twitter:card" content="
