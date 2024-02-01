@@ -13,4 +13,7 @@ class MyDocument extends Document {
             content="ساخت بایو برای شبکه های اجتماعی"
           />
           <meta property="og:title" content="بایو حرفه ای" />
-          <meta name="twitter:card" content="
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="نوشتن بایو حرفه ای" />
+          <meta
+            name="twitt
