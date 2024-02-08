@@ -16,4 +16,8 @@ class MyDocument extends Document {
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="نوشتن بایو حرفه ای" />
           <meta
-            name="twitt
+            name="twitter:description"
+            content="ساخت بایو برای شبکه های اجتماعی"
+          />
+        </Head>
+        <body
