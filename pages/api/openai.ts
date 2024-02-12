@@ -8,4 +8,10 @@ if (!process.env.NEXT_PUBLIC_OPENAI_API_KEY) {
 //   runtime: "edge",
 // };
 
-const handler = async (req: Request): Promise<a
+const handler = async (req: Request): Promise<any> => {
+  const { prompt } = (await req.body) as {
+    prompt?: string;
+  };
+
+  if (!prompt) {
+    return new Response(
