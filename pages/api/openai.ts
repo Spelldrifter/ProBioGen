@@ -14,4 +14,9 @@ const handler = async (req: Request): Promise<any> => {
   };
 
   if (!prompt) {
-    return new Response(
+    return new Response("No prompt in the request", { status: 400 });
+  }
+
+  const payload: OpenAIStreamPayload = {
+    model: "gpt-3.5-turbo",
+    messages:
