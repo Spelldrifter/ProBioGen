@@ -31,4 +31,10 @@ const handler = async (req: Request): Promise<any> => {
 
   try {
     const stream = await OpenAIStream(payload);
-    
+    return stream
+  } catch (err) {
+    return new Response(err as any, { status: 500 });
+  }
+};
+
+export default handler;
