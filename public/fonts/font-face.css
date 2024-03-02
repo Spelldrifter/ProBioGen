@@ -14,4 +14,10 @@
   src: url('Sahel-Bold.eot?#iefix') format('embedded-opentype'),
     url('Sahel-Bold.woff2') format('woff2'),
     url('Sahel-Bold.woff') format('woff'),
-    url
+    url('Sahel-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Sahel;
+  src: url('Sahel-Light
