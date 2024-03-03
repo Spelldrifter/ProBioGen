@@ -20,4 +20,7 @@
 
 @font-face {
   font-family: Sahel;
-  src: url('Sahel-Light
+  src: url('Sahel-Light.eot');
+  src: url('Sahel-Light.eot?#iefix') format('embedded-opentype'),
+    url('Sahel-Light.woff2') format('woff2'),
+    url('Sahel
