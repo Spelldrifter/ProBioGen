@@ -32,4 +32,6 @@
   font-family: Sahel;
   src: url('Sahel-SemiBold.eot');
   src: url('Sahel-SemiBold.eot?#iefix') format('embedded-opentype'),
-    url(
+    url('Sahel-SemiBold.woff2') format('woff2'),
+    url('Sahel-SemiBold.woff') format('woff'),
+    url('Sahel-SemiBold.ttf') forma
