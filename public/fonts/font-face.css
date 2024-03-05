@@ -34,4 +34,11 @@
   src: url('Sahel-SemiBold.eot?#iefix') format('embedded-opentype'),
     url('Sahel-SemiBold.woff2') format('woff2'),
     url('Sahel-SemiBold.woff') format('woff'),
-    url('Sahel-SemiBold.ttf') forma
+    url('Sahel-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: Sahel;
+  src: url('Sahel-Black.eot');
+  src: url('Sahel-Black.e
