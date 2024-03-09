@@ -41,4 +41,6 @@
 @font-face {
   font-family: Sahel;
   src: url('Sahel-Black.eot');
-  src: url('Sahel-Black.e
+  src: url('Sahel-Black.eot?#iefix') format('embedded-opentype'),
+    url('Sahel-Black.woff2') format('woff2'),
+    url('Sahel-Black.w
