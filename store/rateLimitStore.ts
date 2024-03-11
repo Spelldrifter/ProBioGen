@@ -8,4 +8,9 @@ const RATE_LIMIT = {
 const rateLimitStore: Record<string, { requests: number; windowStart: number }> = {};
 
 // Function to check and update rate limit for an IP
-export fu
+export function checkRateLimit(ip: string): boolean {
+  if (!ip) {
+    return false;
+  }
+  const currentTime = Date.now();
+  const
