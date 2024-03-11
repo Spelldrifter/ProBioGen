@@ -13,4 +13,8 @@ export function checkRateLimit(ip: string): boolean {
     return false;
   }
   const currentTime = Date.now();
-  const
+  const record = rateLimitStore[ip];
+
+  if (!record) {
+    // If no record exists for the IP, create one
+    rateLimitStore[ip] 
