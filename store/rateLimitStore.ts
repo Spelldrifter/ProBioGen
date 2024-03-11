@@ -5,4 +5,7 @@ const RATE_LIMIT = {
 };
 
 // In-memory storage for rate limiting
-const rateLimitStore: Rec
+const rateLimitStore: Record<string, { requests: number; windowStart: number }> = {};
+
+// Function to check and update rate limit for an IP
+export fu
