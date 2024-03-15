@@ -17,4 +17,8 @@ export function checkRateLimit(ip: string): boolean {
 
   if (!record) {
     // If no record exists for the IP, create one
-    rateLimitStore[ip] 
+    rateLimitStore[ip] = { requests: 1, windowStart: currentTime };
+    return true;
+  }
+
+  if (currentTime - record.windowStart > RATE_LIMIT
