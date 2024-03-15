@@ -21,4 +21,6 @@ export function checkRateLimit(ip: string): boolean {
     return true;
   }
 
-  if (currentTime - record.windowStart > RATE_LIMIT
+  if (currentTime - record.windowStart > RATE_LIMIT.WINDOW_SIZE) {
+    // If the current request is outside the window, reset the record
+    rateLimitStore[i
