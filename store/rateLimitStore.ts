@@ -28,3 +28,6 @@ export function checkRateLimit(ip: string): boolean {
   }
 
   if (record.requests < RATE_LIMIT.MAX_REQUESTS) {
+    // If the request count is within limits, increment and allow
+    rateLimitStore[ip].requests += 1;
+    ret
