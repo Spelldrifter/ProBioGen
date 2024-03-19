@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
-@import url('../public/f
+@import url('../public/fonts/font-face.css');
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foregrou
