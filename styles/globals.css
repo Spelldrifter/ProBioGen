@@ -69,4 +69,15 @@
 
 @layer base {
   * {
-    @apply bo
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+
+* {
+  font-family: 'Sahel';
+}
