@@ -7,4 +7,9 @@
   margin-right: 2px;
 }
 
-.loading span 
+.loading span {
+  animation-name: blink;
+  animation-duration: 1.4s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  wid
