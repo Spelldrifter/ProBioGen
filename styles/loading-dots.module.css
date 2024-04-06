@@ -29,4 +29,13 @@
 
 .loading2 {
   display: inline-flex;
-  align-i
+  align-items: center;
+}
+
+.loading2 .spacer {
+  margin-right: 2px;
+}
+
+.loading2 span {
+  animation-name: blink;
+ 
