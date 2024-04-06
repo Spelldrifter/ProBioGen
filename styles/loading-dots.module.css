@@ -12,4 +12,11 @@
   animation-duration: 1.4s;
   animation-iteration-count: infinite;
   animation-fill-mode: both;
-  wid
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 1px;
+}
+
+.loading span:nth-of-typ
