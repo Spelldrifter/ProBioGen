@@ -42,4 +42,11 @@
   animation-iteration-count: infinite;
   animation-fill-mode: both;
   width: 4px;
-  heigh
+  height: 4px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 1px;
+}
+
+.loading2 span:nth-of-type(2) {
+  animation-
