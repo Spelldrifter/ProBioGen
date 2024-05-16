@@ -28,4 +28,10 @@
     },
     "plugins": [
       {
-    
+        "name": "next"
+      }
+    ]
+  },
+  "include": [
+    "next-env.d.ts",
+    "environment.d.ts"
