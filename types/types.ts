@@ -22,3 +22,5 @@ export type VibeType = "حرفه‌ای" | "معمولی" | "طنز";
 
 export interface UserInputPayload {
   vibe: VibeType;
+  bio: string;
+}
